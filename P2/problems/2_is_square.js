@@ -16,7 +16,13 @@ isSquare(16) => true
 *******************************************************************************/
 
 function isSquare(number) {
-  // your code here...
+  for(i = 1; i <= number; i++){
+    if(i*i === number){
+      return true
+      break
+    }
+  }
+  return false
   
 }
 

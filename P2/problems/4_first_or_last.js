@@ -14,7 +14,12 @@ firstOrLast(['Jenny', 'Mary', 'Mark']) => 'Mark'
 *******************************************************************************/
 
 function firstOrLast(array) {
-  // your code here...
+  var numberOfElement = array.length;
+  if (numberOfElement % 2 === 0) {
+    return array[0]
+  } else {
+    return array[array.length - 1]
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
