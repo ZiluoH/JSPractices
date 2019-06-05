@@ -8,8 +8,13 @@ magicNumbers(20) => [4, 6, 8, 16, 18]
 *******************************************************************************/
 
 function magicNumbers(max) {
-  // your code here...
-
+  var arr = [];
+  for (var i = 0; i < max; i++){
+    if (i % 4 === 0 && i % 6 !== 0 || i % 4 !== 0 && i % 6 ===0) {
+      arr.push(i);
+    }
+  }
+  return arr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

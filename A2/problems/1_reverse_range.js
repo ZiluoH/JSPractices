@@ -10,7 +10,11 @@ reverseRange(4,2) => []
 *******************************************************************************/
 
 function reverseRange(start, end) {
-  // your code here...
+  var arr = [];
+  for(i = end - 1; i > start; i--){
+    arr.push(i)
+  };
+  return arr;
 
 }
 

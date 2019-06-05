@@ -11,8 +11,16 @@ isPrime(15); // => false
 *******************************************************************************/
 
 function isPrime(number) {
-  // your code here...
-
+  if (number < 2) {
+    return false;
+  } else {
+    for(var i = 2; i < number; i++){
+      if (number % i === 0){
+        return false;
+      }
+    }
+    return true;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

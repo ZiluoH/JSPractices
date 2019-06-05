@@ -20,7 +20,11 @@ firstAndLast([7, 11, 3]); // => 4
 *******************************************************************************/
 
 function firstAndLast(array) {
-  // your code here...
+  if(array.length % 2 === 0){
+    return array[0] + array[array.length - 1];
+  } else {
+    return array[0] - array[array.length - 1];
+  }
 
 }
 
