@@ -14,6 +14,15 @@ valueReplace(['danny', 'kurstie', 'tommy'], {kurstie: 'operations', danny: 'plac
 
 function valueReplace(array, obj){
   // your code here...
+  var arr = [];
+  for (var i = 0; i < array.length; i++){
+    if(obj[array[i]] !== undefined){
+      arr.push(obj[array[i]]);
+    } else {
+      arr.push(array[i]);
+    }
+  }
+  return arr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

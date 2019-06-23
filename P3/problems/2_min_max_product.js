@@ -9,8 +9,21 @@ minMaxProduct([6, 3, 7, 2]) => 14
 minMaxProduct([0, 1, -5, 3, 6]) => -30
 *******************************************************************************/
 
+
+
 function minMaxProduct(array){
-  // your code here...
+  var min = array[0];
+  var max = array[0];
+  for (var i = 0; i < array.length; i++){
+    if(array[i] < min){
+      min = array[i];
+    }else if(array[i] > max){
+      max = array[i];
+    }
+  }
+
+
+  return min*max;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

@@ -14,7 +14,8 @@ phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') => false
 *******************************************************************************/
 
 function phraseFinder(words, phrase){
-  // your code here...
+  var ele = phrase.split(' ');
+  return (words.indexOf(ele[0]) > -1 && words.indexOf(ele[1]) > -1)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

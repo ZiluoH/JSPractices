@@ -10,6 +10,13 @@ multiples(15, 3) => [ 3, 6, 9, 12 ]
 
 function multiples(max, num){
   // your code here...
+  var arr = [];
+  for (var i = 1; i < max; i++){
+    if(i % num === 0){
+      arr.push(i);
+    }
+  }
+  return arr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
