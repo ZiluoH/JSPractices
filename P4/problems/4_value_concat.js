@@ -14,6 +14,16 @@ valueConcat(['a', 'b', 'c'], {b: 2, c: 3})
 
 function valueConcat(array, obj) {
   // your code here...
+  var arr = [];
+  for(var i = 0; i < array.length; i++){
+    var ele = array[i];
+    if(obj[ele] === undefined){
+      arr.push(ele);
+    } else {
+      arr.push(ele + obj[ele]);
+    }
+  }
+  return arr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
