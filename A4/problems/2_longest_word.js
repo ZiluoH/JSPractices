@@ -12,7 +12,14 @@ longestWord(''); // => ''
 
 function longestWord(sentence) {
   // your code here...
-
+  var words = sentence.split(' ');
+  var longestWord = words[0];
+  for (var i = 0; i < words.length; i++){
+    if(words[i].length >= longestWord.length){
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

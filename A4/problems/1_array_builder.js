@@ -12,6 +12,13 @@ arrayBuilder({}); //=> []
 
 function arrayBuilder(count) {
   // your code here...
+  var arr = [];
+  for(var key in count){
+    for(var i = 0; i < count[key]; i++){
+      arr.push(key);
+    }
+  }
+  return arr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

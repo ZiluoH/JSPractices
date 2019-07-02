@@ -11,7 +11,11 @@ leastCommonMultiple(24, 26) => 312
 
 function leastCommonMultiple(num1, num2) {
   // your code here...
-
+  var min = 1;
+  while (min % num1 !== 0 || min % num2 !== 0) {
+    min++;
+  }
+  return min;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

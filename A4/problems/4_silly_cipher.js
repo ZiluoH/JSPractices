@@ -14,7 +14,16 @@ sillyCipher("twmce", { m : "n", t : "d", w : "a"}) //=> 'dan..''
 
 function sillyCipher(sentence, cipher){
   // your code here...
-
+  var newSen = '';
+  for (var i = 0; i < sentence.length; i++){
+    var char = sentence[i];
+    if(cipher[char] === undefined){
+      newSen = newSen + '.';
+    } else {
+      newSen = newSen + cipher[char];
+    }
+  }
+  return newSen;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
