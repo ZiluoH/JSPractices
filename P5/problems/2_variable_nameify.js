@@ -14,5 +14,10 @@ function variableNameify(words) {
   // your code here...
 }
 
+function capFirst(word){
+  var capped = '';
+  
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = variableNameify;

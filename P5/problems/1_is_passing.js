@@ -26,7 +26,15 @@ isPassing(assessments2) => false
 *******************************************************************************/
 
 function isPassing(assessments) {
-  // your code here...
+  var sum = 0;
+  for(var i = 0; i < assessments.length; i++){
+    sum += assessments[i].score;
+  }
+  if(sum / assessments.length < 70){
+    return false;
+  } else {
+    return true;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
