@@ -22,6 +22,13 @@ sum2DArray(arr2); // => 3
 
 function sum2DArray(array) {
   // your code here...
+  var sum = 0;
+  for (var i = 0; i < array.length; i++){
+    for(var j = 0; j < array[i].length; j++){
+      sum += array[i][j];
+    }
+  }
+  return sum;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

@@ -20,6 +20,16 @@ minValueCallback(array2, double); // => 18
 
 function minValueCallback(array, cb) {
   // your code here...
+  if(array.length === 0 ){
+    return null;
+  }
+  var min = array[0];
+  for(var i = 0; i < array.length; i++){
+    if (min > array[i]){
+      min = array[i];
+    }
+  }
+  return cb(min);
 }
 
 

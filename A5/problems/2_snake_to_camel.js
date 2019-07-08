@@ -13,7 +13,14 @@ snakeToCamel('BOOtcamp_PREP_iS_cOol'); // => 'BootcampPrepIsCool'
 *******************************************************************************/
 
 function snakeToCamel(str) {
-  // your code here...
+  var arr = str.split('_');
+  var cappedArr = [];
+  for (var i = 0; i < arr.length; i++){
+    var word = arr[i];
+    var capped = word[0].toUpperCase() + word.slice(1).toLowerCase();
+    cappedArr.push(capped);
+  }
+  return cappedArr.join('');
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

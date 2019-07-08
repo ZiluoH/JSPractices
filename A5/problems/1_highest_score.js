@@ -17,9 +17,23 @@ highestScore(students); //=> 'TD2'
 *******************************************************************************/
 
 function highestScore(students) {
-  // your code here...
+  var name = students[0].name.split(' ');
+  var id = students[0].id;
+  var score = students[0].score
+  
+  for (var i = 0; i < students.length; i++){
+    if(students[i].score > score){
+      score = students[i].score;
+      name = students[i].name.split(' ');
+      id = students[i].id;
+    }
+  }
+  var initials = name[0][0] + name[1][0] + id
+  return initials;
 
 }
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = highestScore;
