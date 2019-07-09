@@ -17,6 +17,12 @@ hasSymmetry(['cat', 'dog', 'bird', 'bird', 'cat']) => false
 
 function hasSymmetry(array) {
   // your code here...
+  for (var i = 0; i < array.length; i++){
+    if (array[i] !== array[array.length - 1 - i]){
+      return false;
+    }
+  }
+  return true;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

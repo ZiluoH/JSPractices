@@ -1,9 +1,3 @@
-/******************************************************************************
-Write a function totalNumProblems(assessments) that takes in an object of assessment
-objects. The function should return the total number of problems in all assessments.
-
-Example:
-
 var assessments = {
   w1d5: {
     totalPoints: 7,
@@ -35,17 +29,22 @@ var assessments = {
   }
 }
 
-totalNumProblems(assessments) => 29
-*******************************************************************************/
+
+
+
 
 function totalNumProblems(assessments) {
   // your code here...
   var count = 0;
-    for(var key in assessments){
-      count += assessments[key].problems.length;
-    }
-  return count;
+  for(var key in assessments){
+    count += assessments[key].totalPoints;
+  }
+  console.log(count);
 }
 
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
-module.exports = totalNumProblems;
+
+
+
+
+
+totalNumProblems(assessments)

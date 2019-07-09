@@ -11,7 +11,21 @@ evenSumArray([2, 8, 3, 5]) => [ 2, 20, 2, 6 ]
 
 function evenSumArray(array) {
   // your code here...
+  var arr = [];
+  for(var i = 0; i < array.length; i++){
+    var max = array[i];
+    var sum = 0;
+    for(var j = 0; j <= max; j += 2){
+      sum += j;
+    }
+    arr.push(sum);
+  }
+  return arr;
 }
+
+
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = evenSumArray;
