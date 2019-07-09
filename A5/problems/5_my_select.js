@@ -23,6 +23,13 @@ result2; // => [ 2, 4, 8 ]
 
 function mySelect(arr, cb) {
   // your code here...
+  var resultArr = [];
+  for (var i = 0; i < arr.length; i++){
+    if(cb(arr[i]) === true){
+      resultArr.push(arr[i]);
+    }
+  }
+  return resultArr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
