@@ -28,6 +28,21 @@ passingStudents(students); // => [ 'Kush', 'Ned' ]
 
 function passingStudents(students) {
   // your code here...
+  var arr = [];
+  for(var i = 0; i < students.length; i++){
+    var student = students[i];
+    var grade = student.grades;
+    var totalScore = 0;
+    for(var j = 0; j < grade.length; j++){
+      var score = grade[j].score;
+      totalScore += score;
+    }
+
+    if(totalScore / grade.length >= 70){
+      arr.push(student.name);
+    }
+  }
+  return arr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

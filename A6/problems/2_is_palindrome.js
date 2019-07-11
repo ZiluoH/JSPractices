@@ -13,6 +13,15 @@ isPalindrome('hello world'); // => false
 
 function isPalindrome(sentence) {
   // your code here...
+  var char = sentence.split(' ').join('');
+  for(var i = 0; i < char.length; i++){
+    var start = char[i];
+    var end = char[char.length - 1 - i];
+    if(start !== end){
+      return false;
+    }
+  }
+  return true;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
