@@ -1,50 +1,25 @@
-var assessments = {
-  w1d5: {
-    totalPoints: 7,
-    problems: ['range', 'reverseSentence', 'unique', 'fizzBuzz', 'stringRange']
-  },
-  w2d1: {
-    totalPoints: 10,
-    problems: ['reverseRange', 'isPrime', 'magicNumbers', 'firstAndLast', 'royalWe']
-  },
-  w2d5: {
-    totalPoints: 7,
-    problems: ['myIndexOf', 'minMaxDifference', 'divisibleBy', 'dynamicFizzBuzz', 'magicCipher']
-  },
-  w3d1: {
-    totalPoints: 7,
-    problems: ['arrayBuilder', 'longestWord', 'leastCommonMultiple', 'sillyCipher', 'hipsterfy']
-  },
-  w3d5: {
-    totalPoints: 5,
-    problems: ['highestScore', 'snakeToCamel', 'sum2DArray', 'minValueCallback', 'mySelect']
-  },
-  w4d1: {
-    totalPoints: 5,
-    problems: ['not', 'so', 'fast']
-  },
-  w4d5: {
-    totalPoints: 4,
-    problems: [':)']
-  }
-}
+bestWinStreak('WWLWWWLWW')
 
-
-
-
-
-function totalNumProblems(assessments) {
+function bestWinStreak(str) {
   // your code here...
-  var count = 0;
-  for(var key in assessments){
-    count += assessments[key].totalPoints;
+  var bestWin = 0;
+  var currentWin = 0;
+  for (var i = 0; i < str.length; i++){
+    if (currentWin === 0 && str[i] === 'W'){
+      currentWin = 1;
+      if (currentWin > bestWin) {
+        bestWin = 1;
+      }
+    } else if (currentWin > 0 && str[i] === 'W'){
+      currentWin++;
+      if (currentWin > bestWin) {
+        bestWin = currentWin;
+      }
+    } else if (str[i] === 'L'){
+      currentWin = 0; 
+    }
   }
-  console.log(count);
+  console.log(bestWin);
 }
 
 
-
-
-
-
-totalNumProblems(assessments)
