@@ -13,8 +13,18 @@ longestBigram("his last assessment is fun"); // => 'last assessment'
 *******************************************************************************/
 
 function longestBigram(sentence) {
-  // your code here...
+  var words = sentence.split(' ');
+  var longest = '';
 
+  for (var i = 0; i < words.length - 1; i += 1) {
+    var bigram = words[i] + ' ' + words[i + 1];
+
+    if (bigram.length > longest.length) {
+      longest = bigram;
+    }
+  }
+
+  return longest;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

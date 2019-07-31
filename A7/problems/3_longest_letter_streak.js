@@ -19,7 +19,23 @@ longestLetterStreak("YYYYY", ["Z", "K", "Y"]); // => 5
 
 function longestLetterStreak(str, searchLetters) {
   // your code here...
+  var longest = 0;
+  var current = 0;
+  for (var i = 0; i < str.length; i++){
+    var char = str[i];
+    if (current === 0 && searchLetters.indexOf(char) !== -1){
+      current = 1;
+    } else if (current > 0 && searchLetters.indexOf(char) !== -1){
+      current++;
+    } else if (current > 0 && searchLetters.indexOf(char) === -1){
+      current = 0;
+    }
 
+    if (current > longest){
+      longest = current;
+    }
+  }
+  return longest;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

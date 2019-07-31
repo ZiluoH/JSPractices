@@ -11,9 +11,25 @@ numberPrimes(20); // => 8
 numberPrimes(100); // => 25
 *******************************************************************************/
 
+function isPrime(num){
+  for (var i = 2; i < num; i ++){
+    if(num % i === 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+
 function numberPrimes(n) {
   // your code here...
-
+  var count = 0;
+  for (var i = 2; i <= n; i++){
+    if(isPrime(i) === true){
+      count++;
+    }
+  }
+  return count;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
