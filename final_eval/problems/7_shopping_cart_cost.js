@@ -18,7 +18,11 @@ Difficulty: Medium
 *************************************************************************************/
 
 function shoppingCartCost(cart, prices) {
-
+  var total = 0;
+  for (var key in cart){
+    total += prices[key] * cart[key];
+  }
+  return total;
 }
 
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/

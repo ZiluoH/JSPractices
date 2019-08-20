@@ -1,43 +1,27 @@
-function isPrime(num){
-  if (num < 2){
-    return false;
-  }
-  
-  for (var i = 2; i < num; i ++){
-    if(num % i === 0){
-      return false;
+function pyramidScheme(base) {
+  var pyramid = [];
+  pyramid.push(base);
+  var newBase = [];
+  for (var i = base.length; i > 1; i--){
+    
+    for (var j = 0; j < base.length - 1; j++){
+      newBase.push(base[j] + base[j + 1]);
     }
+    pyramid.unshift(newBase);
+    base = newBase;
+    newBase = [];
   }
-  return true;
-}
 
-function beforePrime(num){
-  if (num === 2){
-    return null;
-  } else {
-    for (var i = num -1; true ; i--){
-      if (isPrime(i)){
-        return i;
-      }
-    }
-  }
-}
-
-function previousPrimeArray(array) {
-  var arr = [];
-  for (var i = 0; i < array.length; i++){
-    var num = array[i];
-    if (isPrime(num) === false){
-      arr.push(num);
-    } else {
-      arr.push(beforePrime(num));
-    }
-  }
-  console.log(arr);
+  console.log(pyramid);
 }
 
 
-previousPrimeArray([10, 12, 11, 7, 16]); // => [ 10, 12, 7, 5, 16 ]
-previousPrimeArray([17, 24, 29, 5, 2, 4]); // => [ 13, 24, 23, 3, null, 4 ]
-previousPrimeArray([1, 2, 3, 4, 5]); // [ 1, null, 2, 4, 3 ]
-console.log(isPrime(1))
+var p1 = pyramidScheme([2, 3, 7, 5, 9]);
+p1 // =>
+//  [
+//    [ 85 ],
+//    [ 37, 48 ],
+//    [ 15, 22, 26 ],
+//    [ 5, 10, 12, 14 ],
+//    [ 2, 3, 7, 5, 9 ]
+//  ]

@@ -12,7 +12,9 @@ Difficulty: Easy
 *************************************************************************************/
 
 function wordSandwich(outerWord, innerWord) {
-  
+  var str = '';
+  str = outerWord.toUpperCase() + innerWord.toLowerCase() + outerWord.toUpperCase();
+  return str;
 }
 
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/

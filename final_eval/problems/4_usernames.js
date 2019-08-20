@@ -17,7 +17,13 @@ Difficulty: Medium
 *************************************************************************************/
 
 function usernames(names) {
-
+  var usernames = [];
+  for (var i = 0; i < names.length; i++){
+    var name = names[i].split(' ');
+    var username = name[0][0] + name[1];
+    usernames.push(username.toLowerCase());
+  }
+  return usernames;
 }
 
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/

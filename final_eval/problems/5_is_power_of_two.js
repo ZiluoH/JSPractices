@@ -16,7 +16,15 @@ Difficulty: Medium
 *************************************************************************************/
 
 function isPowerOfTwo(num) {
-
+  var fac = 1;
+  while (fac <= num) {
+    
+    if (fac === num){
+      return true;
+    }
+    fac = fac * 2;
+  }
+  return false;
 }
 
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/

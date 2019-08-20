@@ -19,7 +19,12 @@ Difficulty: Medium
 *************************************************************************************/
 
 function areCoprime(num1, num2) {
-
+  for (var i = 2; i <= num1; i++){
+    if(num1 % i === 0 && num2 % i === 0){
+      return false;
+    }
+  }
+  return true;
 }
 
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/

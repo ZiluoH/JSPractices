@@ -44,7 +44,20 @@ Difficulty: Hard
 *************************************************************************************/
 
 function pyramidScheme(base) {
+  var pyramid = [];
+  pyramid.push(base);
+  var newBase = [];
+  for (var i = base.length; i > 1; i--){
+    
+    for (var j = 0; j < base.length - 1; j++){
+      newBase.push(base[j] + base[j + 1]);
+    }
+    pyramid.unshift(newBase);
+    base = newBase;
+    newBase = [];
+  }
 
+  return pyramid;
 }
 
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/
